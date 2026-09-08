@@ -16,9 +16,10 @@
 
     <selenium.version>4.48.0</selenium.version>
     <testng.version>7.12.0</testng.version>
-
+    <log4j.version>2.26.1</log4j.version>
     <maven.compiler.plugin.version>3.16.0</maven.compiler.plugin.version>
     <maven.surefire.plugin.version>3.6.0</maven.surefire.plugin.version>
+
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -39,6 +40,26 @@
       <artifactId>testng</artifactId>
       <version>${testng.version}</version>
       <scope>test</scope>
+    </dependency>
+    <!-- Log4j2 API -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
+    <!-- Log4j2 Implementation -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
+    <!-- SLF4J 2 -> Log4j2 -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j2-impl</artifactId>
+      <version>${log4j.version}</version>
     </dependency>
 
   </dependencies>

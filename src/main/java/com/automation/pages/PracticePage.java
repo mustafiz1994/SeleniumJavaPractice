@@ -6,7 +6,10 @@ import org.openqa.selenium.WebDriver;
 
 public class PracticePage extends BasePage {
 
+    // =========================
     // Radio Buttons
+    // =========================
+
     private final By bmwRadio =
             By.id("bmwradio");
 
@@ -16,7 +19,11 @@ public class PracticePage extends BasePage {
     private final By hondaRadio =
             By.id("hondaradio");
 
+
+    // =========================
     // Checkboxes
+    // =========================
+
     private final By bmwCheckbox =
             By.id("bmwcheck");
 
@@ -26,48 +33,45 @@ public class PracticePage extends BasePage {
     private final By hondaCheckbox =
             By.id("hondacheck");
 
+
+    // =========================
+    // Dropdown
+    // =========================
+
+    private final By carDropdown =
+            By.id("carselect");
+
+
+    // =========================
+    // Window
+    // =========================
+
+    private final By openWindowButton =
+            By.id("openwindow");
+
+
+    // =========================
+    // Constructor
+    // =========================
+
     public PracticePage(WebDriver driver) {
 
         super(driver);
-    }
 
-    /*public void selectBMWRadioButton() {
-
-        click(bmwRadio);
-    }
-
-    public void selectBenzRadioButton() {
-
-        click(benzRadio);
-    }
-
-    public void selectHondaRadioButton() {
-
-        click(hondaRadio);
-    }
-
-     */
-
-    public void selectBMWCheckbox() {
-
-        click(bmwCheckbox);
-    }
-
-    public void selectBenzCheckbox() {
-
-        click(benzCheckbox);
-    }
-
-    public void selectHondaCheckbox() {
-
-        click(hondaCheckbox);
+        logger.debug("PracticePage initialized");
     }
 
 
+    // =========================
+    // Radio Button Actions
+    // =========================
 
     public void selectRadioButton(String car) {
 
+        logger.info("Selecting radio button: {}", car);
+
         switch (car.toLowerCase()) {
+
             case "bmw":
                 click(bmwRadio);
                 break;
@@ -81,14 +85,32 @@ public class PracticePage extends BasePage {
                 break;
 
             default:
+
+                logger.error(
+                        "Unsupported radio button option: {}",
+                        car
+                );
+
                 throw new IllegalArgumentException(
                         "Unsupported car: " + car);
         }
+
+        logger.debug(
+                "Radio button selected successfully: {}",
+                car
+        );
     }
+
 
     public boolean isRadioButtonSelected(String car) {
 
+        logger.debug(
+                "Checking radio button selection: {}",
+                car
+        );
+
         switch (car.toLowerCase()) {
+
             case "bmw":
                 return isSelected(bmwRadio);
 
@@ -99,40 +121,123 @@ public class PracticePage extends BasePage {
                 return isSelected(hondaRadio);
 
             default:
+
+                logger.error(
+                        "Unsupported radio button option: {}",
+                        car
+                );
+
                 throw new IllegalArgumentException(
                         "Unsupported car: " + car);
         }
     }
 
-   /* public boolean isBMWRadioSelected() {
 
-        return driver.findElement(bmwRadio).isSelected();
+    // =========================
+    // Checkbox Actions
+    // =========================
+
+    public void selectBMWCheckbox() {
+
+        logger.info("Selecting BMW checkbox");
+
+        selectCheckbox(bmwCheckbox);
     }
 
-    public boolean isBenzRadioSelected() {
 
-        return driver.findElement(benzRadio).isSelected();
+    public void selectBenzCheckbox() {
+
+        logger.info("Selecting Benz checkbox");
+
+        selectCheckbox(benzCheckbox);
     }
 
-    public boolean isHondaRadioSelected() {
 
-        return driver.findElement(hondaRadio).isSelected();
+    public void selectHondaCheckbox() {
+
+        logger.info("Selecting Honda checkbox");
+
+        selectCheckbox(hondaCheckbox);
     }
 
-    */
 
     public boolean isBMWCheckboxSelected() {
 
-        return driver.findElement(bmwCheckbox).isSelected();
+        logger.debug("Checking BMW checkbox selection");
+
+        return isSelected(bmwCheckbox);
     }
+
 
     public boolean isBenzCheckboxSelected() {
 
-        return driver.findElement(benzCheckbox).isSelected();
+        logger.debug("Checking Benz checkbox selection");
+
+        return isSelected(benzCheckbox);
     }
+
 
     public boolean isHondaCheckboxSelected() {
 
-        return driver.findElement(hondaCheckbox).isSelected();
+        logger.debug("Checking Honda checkbox selection");
+
+        return isSelected(hondaCheckbox);
+    }
+
+
+    // =========================
+    // Dropdown Actions
+    // =========================
+
+    public void selectCarByVisibleText(String car) {
+
+        logger.info(
+                "Selecting car from dropdown by visible text: {}",
+                car
+        );
+
+        selectByVisibleText(carDropdown, car);
+    }
+
+
+    public void selectCarByValue(String value) {
+
+        logger.info(
+                "Selecting car from dropdown by value: {}",
+                value
+        );
+
+        selectByValue(carDropdown, value);
+    }
+
+
+    public void selectCarByIndex(int index) {
+
+        logger.info(
+                "Selecting car from dropdown by index: {}",
+                index
+        );
+
+        selectByIndex(carDropdown, index);
+    }
+
+
+    public String getSelectedCar() {
+
+        logger.debug("Getting selected car from dropdown");
+
+        return getSelectedOption(carDropdown);
+    }
+
+
+    // =========================
+    // Window Actions
+    // =========================
+
+    public void clickOpenWindow() {
+
+        logger.info("Clicking Open Window button");
+
+        click(openWindowButton);
     }
 }

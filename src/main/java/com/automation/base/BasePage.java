@@ -1,21 +1,30 @@
 package com.automation.base;
 
 import com.automation.utils.WaitUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
+import java.util.Set;
 
 public class BasePage {
 
     protected WebDriver driver;
     protected WaitUtils wait;
 
+    protected final Logger logger =
+            LogManager.getLogger(getClass());
+
     public BasePage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WaitUtils(driver);
+
+        logger.debug("Initialized page object: {}",
+                getClass().getSimpleName());
     }
 
     // =========================
@@ -23,26 +32,48 @@ public class BasePage {
     // =========================
 
     protected void navigateTo(String url) {
+
+        logger.info("Navigating to URL: {}", url);
+
         driver.get(url);
     }
 
     protected String getPageTitle() {
-        return driver.getTitle();
+
+        String title = driver.getTitle();
+
+        logger.debug("Current page title: {}", title);
+
+        return title;
     }
 
     protected String getCurrentUrl() {
-        return driver.getCurrentUrl();
+
+        String url = driver.getCurrentUrl();
+
+        logger.debug("Current URL: {}", url);
+
+        return url;
     }
 
     protected void navigateBack() {
+
+        logger.info("Navigating back");
+
         driver.navigate().back();
     }
 
     protected void navigateForward() {
+
+        logger.info("Navigating forward");
+
         driver.navigate().forward();
     }
 
     protected void refreshPage() {
+
+        logger.info("Refreshing page");
+
         driver.navigate().refresh();
     }
 
@@ -53,12 +84,17 @@ public class BasePage {
 
     protected void click(By locator) {
 
+        logger.info("Clicking element: {}", locator);
+
         wait.waitForClickable(locator).click();
     }
 
     protected void enterText(By locator, String text) {
 
-        WebElement element = wait.waitForVisibility(locator);
+        logger.info("Entering text into element: {}", locator);
+
+        WebElement element =
+                wait.waitForVisibility(locator);
 
         element.clear();
         element.sendKeys(text);
@@ -66,15 +102,27 @@ public class BasePage {
 
     protected void clearText(By locator) {
 
+        logger.info("Clearing text from element: {}", locator);
+
         wait.waitForVisibility(locator).clear();
     }
 
     protected String getText(By locator) {
 
+        logger.debug("Getting text from element: {}", locator);
+
         return wait.waitForVisibility(locator).getText();
     }
 
-    protected String getAttribute(By locator, String attribute) {
+    protected String getAttribute(
+            By locator,
+            String attribute) {
+
+        logger.debug(
+                "Getting attribute '{}' from element: {}",
+                attribute,
+                locator
+        );
 
         return wait.waitForVisibility(locator)
                 .getAttribute(attribute);
@@ -87,15 +135,21 @@ public class BasePage {
 
     protected boolean isDisplayed(By locator) {
 
+        logger.debug("Checking if element is displayed: {}", locator);
+
         return wait.waitForVisibility(locator).isDisplayed();
     }
 
     protected boolean isEnabled(By locator) {
 
+        logger.debug("Checking if element is enabled: {}", locator);
+
         return wait.waitForVisibility(locator).isEnabled();
     }
 
     protected boolean isSelected(By locator) {
+
+        logger.debug("Checking if element is selected: {}", locator);
 
         return wait.waitForVisibility(locator).isSelected();
     }
@@ -109,6 +163,12 @@ public class BasePage {
             By locator,
             String text) {
 
+        logger.info(
+                "Selecting '{}' from dropdown: {}",
+                text,
+                locator
+        );
+
         WebElement element =
                 wait.waitForVisibility(locator);
 
@@ -120,6 +180,12 @@ public class BasePage {
     protected void selectByValue(
             By locator,
             String value) {
+
+        logger.info(
+                "Selecting value '{}' from dropdown: {}",
+                value,
+                locator
+        );
 
         WebElement element =
                 wait.waitForVisibility(locator);
@@ -133,6 +199,12 @@ public class BasePage {
             By locator,
             int index) {
 
+        logger.info(
+                "Selecting index '{}' from dropdown: {}",
+                index,
+                locator
+        );
+
         WebElement element =
                 wait.waitForVisibility(locator);
 
@@ -143,17 +215,33 @@ public class BasePage {
 
     protected String getSelectedOption(By locator) {
 
+        logger.debug(
+                "Getting selected option from dropdown: {}",
+                locator
+        );
+
         WebElement element =
                 wait.waitForVisibility(locator);
 
         Select select = new Select(element);
 
-        return select
-                .getFirstSelectedOption()
-                .getText();
+        String selectedOption =
+                select.getFirstSelectedOption().getText();
+
+        logger.debug(
+                "Selected option: {}",
+                selectedOption
+        );
+
+        return selectedOption;
     }
 
     protected List<WebElement> getAllOptions(By locator) {
+
+        logger.debug(
+                "Getting all options from dropdown: {}",
+                locator
+        );
 
         WebElement element =
                 wait.waitForVisibility(locator);
@@ -170,22 +258,106 @@ public class BasePage {
 
     protected void selectCheckbox(By locator) {
 
+        logger.info(
+                "Selecting checkbox/radio button: {}",
+                locator
+        );
+
         WebElement element =
                 wait.waitForVisibility(locator);
 
         if (!element.isSelected()) {
+
             element.click();
+
+            logger.debug(
+                    "Element selected successfully: {}",
+                    locator
+            );
+
+        } else {
+
+            logger.debug(
+                    "Element already selected: {}",
+                    locator
+            );
         }
     }
 
     protected void unselectCheckbox(By locator) {
 
+        logger.info(
+                "Unselecting checkbox: {}",
+                locator
+        );
+
         WebElement element =
                 wait.waitForVisibility(locator);
 
         if (element.isSelected()) {
+
             element.click();
+
+            logger.debug(
+                    "Checkbox unselected successfully: {}",
+                    locator
+            );
+
+        } else {
+
+            logger.debug(
+                    "Checkbox already unselected: {}",
+                    locator
+            );
         }
+    }
+
+
+    // =========================
+    // Window Handling
+    // =========================
+
+    public String getCurrentWindowHandle() {
+
+        String windowHandle =
+                driver.getWindowHandle();
+
+        logger.debug(
+                "Current window handle: {}",
+                windowHandle
+        );
+
+        return windowHandle;
+    }
+
+    public Set<String> getAllWindowHandles() {
+
+        Set<String> windowHandles =
+                driver.getWindowHandles();
+
+        logger.debug(
+                "Total browser windows: {}",
+                windowHandles.size()
+        );
+
+        return windowHandles;
+    }
+
+    public void switchToWindow(String windowHandle) {
+
+        logger.info(
+                "Switching to window: {}",
+                windowHandle
+        );
+
+        driver.switchTo().window(windowHandle);
+    }
+
+    public void closeCurrentWindow() {
+
+        logger.info("Closing current browser window");
+
+        driver.close();
     }
 
 
@@ -195,6 +367,15 @@ public class BasePage {
 
     protected int getElementCount(By locator) {
 
-        return driver.findElements(locator).size();
+        int count =
+                driver.findElements(locator).size();
+
+        logger.debug(
+                "Element count for {}: {}",
+                locator,
+                count
+        );
+
+        return count;
     }
 }

@@ -14,103 +14,192 @@ public class PracticePageTests extends BaseTest {
     public void initializePage() {
 
         practicePage = new PracticePage(driver);
+
+        logger.debug("PracticePage object initialized");
     }
 
-   /* @Test
-    public void verifyBMWRadioButtonSelection() {
 
-        practicePage.selectBMWRadioButton();
+    // =========================
+    // Radio Button Tests
+    // =========================
 
-        Assert.assertTrue(
-                practicePage.isBMWRadioSelected(),
-                "BMW radio button should be selected");
+    @DataProvider(name = "carData")
+    public Object[][] carData() {
+
+        return new Object[][]{
+                {"BMW"},
+                {"Benz"},
+                {"Honda"}
+        };
     }
-
-    @Test
-    public void verifyBenzRadioButtonSelection() {
-
-        practicePage.selectBenzRadioButton();
-
-        Assert.assertTrue(
-                practicePage.isBenzRadioSelected(),
-                "Benz radio button should be selected");
-    }
-
-    @Test
-    public void verifyHondaRadioButtonSelection() {
-
-        practicePage.selectHondaRadioButton();
-
-        Assert.assertTrue(
-                practicePage.isHondaRadioSelected(),
-                "Honda radio button should be selected");
-    }
-    */
-   @DataProvider(name = "carRadioButtons")
-   public Object[][] carRadioButtons() {
-
-       return new Object[][]{
-               {"BMW"},
-               {"Benz"},
-               {"Honda"}
-       };
-   }
 
     @Test(
-            dataProvider = "carRadioButtons",
-            groups = {"smoke", "regression"}
+            priority = 1,
+            groups = {"smoke", "regression"},
+            dataProvider = "carData"
     )
     public void verifyRadioButtonSelection(String car) {
 
+        logger.info(
+                "Starting radio button verification for: {}",
+                car
+        );
+
         practicePage.selectRadioButton(car);
 
-        boolean isSelected = practicePage.isRadioButtonSelected(car);
+        boolean selected =
+                practicePage.isRadioButtonSelected(car);
 
         Assert.assertTrue(
-                isSelected,
-                "Expected [" + car + "] radio button to be selected, " +
-                        "but it was not selected."
+                selected,
+                car + " radio button should be selected"
+        );
+
+        logger.info(
+                "Radio button verification passed for: {}",
+                car
         );
     }
 
-    @Test(groups = {"smoke", "regression"})
+
+    // =========================
+    // Checkbox Tests
+    // =========================
+
+    @Test(
+            priority = 2,
+            groups = {"smoke", "regression"}
+    )
     public void verifyBMWCheckboxSelection() {
+
+        logger.info("Starting BMW checkbox verification");
 
         practicePage.selectBMWCheckbox();
 
-        boolean isSelected = practicePage.isBMWCheckboxSelected();
-
         Assert.assertTrue(
-                isSelected,
-                "Expected [BMW] checkbox to be selected, " +
-                        "but it was not selected."
+                practicePage.isBMWCheckboxSelected(),
+                "BMW checkbox should be selected"
+        );
+
+        logger.info(
+                "BMW checkbox verification passed"
         );
     }
 
-    @Test(groups = {"smoke", "regression"})
-    public void verifyBenzCheckboxSelection() {
 
-        practicePage.selectBenzCheckbox();
+    // =========================
+    // Dropdown Tests
+    // =========================
 
-        boolean isSelected = practicePage.isBenzCheckboxSelected();
+    @Test(
+            priority = 3,
+            groups = {"smoke", "regression"}
+    )
+    public void verifyCarDropdownSelectionByVisibleText() {
 
-        Assert.assertTrue(
-                isSelected,
-                "Expected [Benz] checkbox to be selected, " +
-                        "but it was not selected."
+        logger.info(
+                "Starting car dropdown verification"
+        );
+
+        practicePage.selectCarByVisibleText("BMW");
+
+        String actualCar =
+                practicePage.getSelectedCar();
+
+        Assert.assertEquals(
+                actualCar,
+                "BMW",
+                "Expected selected car to be [BMW], " +
+                        "but actual selected car was [" +
+                        actualCar + "]"
+        );
+
+        logger.info(
+                "Car dropdown verification passed. Selected car: {}",
+                actualCar
         );
     }
-    @Test(groups = {"smoke", "regression"})
-    public void verifyHondaCheckboxSelection() {
 
-        practicePage.selectHondaCheckbox();
 
-        boolean isSelected = practicePage.isHondaCheckboxSelected();
+    // =========================
+    // Switch Window Test
+    // =========================
 
-        Assert.assertTrue(
-                isSelected,
-                "Expected [Honda] checkbox to be selected, " +
-                        "but it was not selected."
+    @Test(
+            priority = 4,
+            groups = {"smoke", "regression"}
+    )
+    public void verifySwitchWindow() {
+
+        logger.info(
+                "Starting Switch Window verification"
+        );
+
+        String parentWindow =
+                practicePage.getCurrentWindowHandle();
+
+        logger.debug(
+                "Parent window handle: {}",
+                parentWindow
+        );
+
+        practicePage.clickOpenWindow();
+
+        var allWindows =
+                practicePage.getAllWindowHandles();
+
+        logger.debug(
+                "Total browser windows after click: {}",
+                allWindows.size()
+        );
+
+        Assert.assertEquals(
+                allWindows.size(),
+                2,
+                "Expected 2 browser windows, but found "
+                        + allWindows.size()
+        );
+
+        for (String window : allWindows) {
+
+            if (!window.equals(parentWindow)) {
+
+                practicePage.switchToWindow(window);
+
+                logger.info(
+                        "Switched successfully to child window"
+                );
+
+                break;
+            }
+        }
+
+        Assert.assertNotEquals(
+                practicePage.getCurrentWindowHandle(),
+                parentWindow,
+                "Driver should be switched to the new window."
+        );
+
+        practicePage.closeCurrentWindow();
+
+        logger.info(
+                "Child window closed successfully"
+        );
+
+        practicePage.switchToWindow(parentWindow);
+
+        Assert.assertEquals(
+                practicePage.getCurrentWindowHandle(),
+                parentWindow,
+                "Driver should be switched back to the parent window."
+        );
+
+        logger.info(
+                "Switched successfully back to parent window"
+        );
+
+        logger.info(
+                "Switch Window verification passed"
         );
     }
 }
