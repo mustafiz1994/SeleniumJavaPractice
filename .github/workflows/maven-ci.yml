@@ -33,4 +33,4 @@ jobs:
         run: mvn -version
 
       - name: Run Maven tests
-        run: mvn --batch-mode clean test
+        run: mvn --batch-mode clean test -Dheadless=true

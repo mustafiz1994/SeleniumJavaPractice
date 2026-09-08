@@ -3,6 +3,7 @@ package com.automation.driver;
 import com.automation.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -24,7 +25,21 @@ public class DriverFactory {
         switch (browser) {
 
             case "chrome":
-                driver = new ChromeDriver();
+
+                ChromeOptions chromeOptions = new ChromeOptions();
+
+                boolean headless = Boolean.parseBoolean(
+                        ConfigReader.getProperty("headless"));
+
+                if (headless) {
+                    chromeOptions.addArguments("--headless=new");
+                    chromeOptions.addArguments("--no-sandbox");
+                    chromeOptions.addArguments("--disable-dev-shm-usage");
+                    chromeOptions.addArguments("--disable-gpu");
+                    chromeOptions.addArguments("--window-size=1920,1080");
+                }
+
+                driver = new ChromeDriver(chromeOptions);
                 break;
 
             case "edge":
