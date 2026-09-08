@@ -6,6 +6,12 @@
 
     <test name="Practice Page Tests">
 
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
         <classes>
             <class name="com.automation.tests.PracticePageTests"/>
         </classes>

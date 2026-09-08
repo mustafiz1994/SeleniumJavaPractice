@@ -22,27 +22,41 @@ public class WaitUtils {
                 Duration.ofSeconds(timeout));
     }
 
-    public WebElement waitForVisibility(By locator) {
+    // =========================
+    // Element Waits
+    // =========================
 
+    public WebElement waitForPresence(By locator) {
+        return wait.until(
+                ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
+    public WebElement waitForVisibility(By locator) {
         return wait.until(
                 ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public WebElement waitForClickable(By locator) {
-
         return wait.until(
                 ExpectedConditions.elementToBeClickable(locator));
     }
 
-    public void waitForElementToDisappear(By locator) {
-
+    public void waitForInvisibility(By locator) {
         wait.until(
                 ExpectedConditions.invisibilityOfElementLocated(locator));
     }
 
-    public void waitForTitle(String title) {
+    // =========================
+    // Page Waits
+    // =========================
 
+    public void waitForTitle(String title) {
         wait.until(
                 ExpectedConditions.titleContains(title));
+    }
+
+    public void waitForUrl(String url) {
+        wait.until(
+                ExpectedConditions.urlContains(url));
     }
 }

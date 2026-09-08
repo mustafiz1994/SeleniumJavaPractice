@@ -31,7 +31,7 @@ public class PracticePage extends BasePage {
         super(driver);
     }
 
-    public void selectBMWRadioButton() {
+    /*public void selectBMWRadioButton() {
 
         click(bmwRadio);
     }
@@ -45,6 +45,8 @@ public class PracticePage extends BasePage {
 
         click(hondaRadio);
     }
+
+     */
 
     public void selectBMWCheckbox() {
 
@@ -61,7 +63,48 @@ public class PracticePage extends BasePage {
         click(hondaCheckbox);
     }
 
-    public boolean isBMWRadioSelected() {
+
+
+    public void selectRadioButton(String car) {
+
+        switch (car.toLowerCase()) {
+            case "bmw":
+                click(bmwRadio);
+                break;
+
+            case "benz":
+                click(benzRadio);
+                break;
+
+            case "honda":
+                click(hondaRadio);
+                break;
+
+            default:
+                throw new IllegalArgumentException(
+                        "Unsupported car: " + car);
+        }
+    }
+
+    public boolean isRadioButtonSelected(String car) {
+
+        switch (car.toLowerCase()) {
+            case "bmw":
+                return isSelected(bmwRadio);
+
+            case "benz":
+                return isSelected(benzRadio);
+
+            case "honda":
+                return isSelected(hondaRadio);
+
+            default:
+                throw new IllegalArgumentException(
+                        "Unsupported car: " + car);
+        }
+    }
+
+   /* public boolean isBMWRadioSelected() {
 
         return driver.findElement(bmwRadio).isSelected();
     }
@@ -75,6 +118,8 @@ public class PracticePage extends BasePage {
 
         return driver.findElement(hondaRadio).isSelected();
     }
+
+    */
 
     public boolean isBMWCheckboxSelected() {
 

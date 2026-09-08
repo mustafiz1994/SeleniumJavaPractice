@@ -3,6 +3,7 @@ package com.automation.tests;
 import com.automation.pages.PracticePage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class PracticePageTests extends BaseTest {
@@ -15,7 +16,7 @@ public class PracticePageTests extends BaseTest {
         practicePage = new PracticePage(driver);
     }
 
-    @Test
+   /* @Test
     public void verifyBMWRadioButtonSelection() {
 
         practicePage.selectBMWRadioButton();
@@ -44,33 +45,72 @@ public class PracticePageTests extends BaseTest {
                 practicePage.isHondaRadioSelected(),
                 "Honda radio button should be selected");
     }
+    */
+   @DataProvider(name = "carRadioButtons")
+   public Object[][] carRadioButtons() {
 
-    @Test
-    public void verifyBMWCheckBox() {
+       return new Object[][]{
+               {"BMW"},
+               {"Benz"},
+               {"Honda"}
+       };
+   }
+
+    @Test(
+            dataProvider = "carRadioButtons",
+            groups = {"smoke", "regression"}
+    )
+    public void verifyRadioButtonSelection(String car) {
+
+        practicePage.selectRadioButton(car);
+
+        boolean isSelected = practicePage.isRadioButtonSelected(car);
+
+        Assert.assertTrue(
+                isSelected,
+                "Expected [" + car + "] radio button to be selected, " +
+                        "but it was not selected."
+        );
+    }
+
+    @Test(groups = {"smoke", "regression"})
+    public void verifyBMWCheckboxSelection() {
 
         practicePage.selectBMWCheckbox();
 
+        boolean isSelected = practicePage.isBMWCheckboxSelected();
+
         Assert.assertTrue(
-                practicePage.isBMWCheckboxSelected(),
-                "BMW Check Box should be selected");
+                isSelected,
+                "Expected [BMW] checkbox to be selected, " +
+                        "but it was not selected."
+        );
     }
 
-    @Test
-    public void verifyBenzCheckBox() {
+    @Test(groups = {"smoke", "regression"})
+    public void verifyBenzCheckboxSelection() {
 
         practicePage.selectBenzCheckbox();
 
+        boolean isSelected = practicePage.isBenzCheckboxSelected();
+
         Assert.assertTrue(
-                practicePage.isBenzCheckboxSelected(),
-                "Benz Check Box should be selected");
+                isSelected,
+                "Expected [Benz] checkbox to be selected, " +
+                        "but it was not selected."
+        );
     }
-    @Test
-    public void verifyHondaCheckBox() {
+    @Test(groups = {"smoke", "regression"})
+    public void verifyHondaCheckboxSelection() {
 
         practicePage.selectHondaCheckbox();
 
+        boolean isSelected = practicePage.isHondaCheckboxSelected();
+
         Assert.assertTrue(
-                practicePage.isHondaCheckboxSelected(),
-                "Benz Check Box should be selected");
+                isSelected,
+                "Expected [Honda] checkbox to be selected, " +
+                        "but it was not selected."
+        );
     }
 }
