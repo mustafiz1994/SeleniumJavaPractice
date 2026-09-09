@@ -20,12 +20,16 @@ public class BasePage {
             LogManager.getLogger(getClass());
 
     public BasePage(WebDriver driver) {
+
         this.driver = driver;
         this.wait = new WaitUtils(driver);
 
-        logger.debug("Initialized page object: {}",
-                getClass().getSimpleName());
+        logger.debug(
+                "Initialized page object: {}",
+                getClass().getSimpleName()
+        );
     }
+
 
     // =========================
     // Browser Actions
@@ -84,14 +88,22 @@ public class BasePage {
 
     protected void click(By locator) {
 
-        logger.info("Clicking element: {}", locator);
+        logger.info(
+                "Clicking element: {}",
+                locator
+        );
 
         wait.waitForClickable(locator).click();
     }
 
-    protected void enterText(By locator, String text) {
+    protected void enterText(
+            By locator,
+            String text) {
 
-        logger.info("Entering text into element: {}", locator);
+        logger.info(
+                "Entering text into element: {}",
+                locator
+        );
 
         WebElement element =
                 wait.waitForVisibility(locator);
@@ -102,14 +114,20 @@ public class BasePage {
 
     protected void clearText(By locator) {
 
-        logger.info("Clearing text from element: {}", locator);
+        logger.info(
+                "Clearing text from element: {}",
+                locator
+        );
 
         wait.waitForVisibility(locator).clear();
     }
 
     protected String getText(By locator) {
 
-        logger.debug("Getting text from element: {}", locator);
+        logger.debug(
+                "Getting text from element: {}",
+                locator
+        );
 
         return wait.waitForVisibility(locator).getText();
     }
@@ -135,23 +153,35 @@ public class BasePage {
 
     protected boolean isDisplayed(By locator) {
 
-        logger.debug("Checking if element is displayed: {}", locator);
+        logger.debug(
+                "Checking if element is displayed: {}",
+                locator
+        );
 
-        return wait.waitForVisibility(locator).isDisplayed();
+        return wait.waitForVisibility(locator)
+                .isDisplayed();
     }
 
     protected boolean isEnabled(By locator) {
 
-        logger.debug("Checking if element is enabled: {}", locator);
+        logger.debug(
+                "Checking if element is enabled: {}",
+                locator
+        );
 
-        return wait.waitForVisibility(locator).isEnabled();
+        return wait.waitForVisibility(locator)
+                .isEnabled();
     }
 
     protected boolean isSelected(By locator) {
 
-        logger.debug("Checking if element is selected: {}", locator);
+        logger.debug(
+                "Checking if element is selected: {}",
+                locator
+        );
 
-        return wait.waitForVisibility(locator).isSelected();
+        return wait.waitForVisibility(locator)
+                .isSelected();
     }
 
 
@@ -314,10 +344,10 @@ public class BasePage {
 
 
     // =========================
-    // Window Handling
+    // Window / Tab Handling
     // =========================
 
-    public String getCurrentWindowHandle() {
+    protected String getCurrentWindowHandle() {
 
         String windowHandle =
                 driver.getWindowHandle();
@@ -330,32 +360,70 @@ public class BasePage {
         return windowHandle;
     }
 
-    public Set<String> getAllWindowHandles() {
+    protected Set<String> getAllWindowHandles() {
 
         Set<String> windowHandles =
                 driver.getWindowHandles();
 
         logger.debug(
-                "Total browser windows: {}",
+                "Total browser windows/tabs: {}",
                 windowHandles.size()
         );
 
         return windowHandles;
     }
 
-    public void switchToWindow(String windowHandle) {
+    protected void switchToWindow(
+            String windowHandle) {
 
         logger.info(
-                "Switching to window: {}",
+                "Switching to window/tab: {}",
                 windowHandle
         );
 
         driver.switchTo().window(windowHandle);
     }
 
-    public void closeCurrentWindow() {
+    protected void switchToNewWindow(
+            String parentWindow) {
 
-        logger.info("Closing current browser window");
+        logger.info(
+                "Looking for newly opened window/tab"
+        );
+
+        Set<String> allWindows =
+                driver.getWindowHandles();
+
+        for (String window : allWindows) {
+
+            if (!window.equals(parentWindow)) {
+
+                logger.info(
+                        "Switching to newly opened window/tab: {}",
+                        window
+                );
+
+                driver.switchTo().window(window);
+
+                return;
+            }
+        }
+
+        logger.error(
+                "No new window/tab found. Parent window: {}",
+                parentWindow
+        );
+
+        throw new IllegalStateException(
+                "No new window/tab found."
+        );
+    }
+
+    protected void closeCurrentWindow() {
+
+        logger.info(
+                "Closing current window/tab"
+        );
 
         driver.close();
     }

@@ -6,6 +6,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.util.Set;
+
 public class PracticePageTests extends BaseTest {
 
     private PracticePage practicePage;
@@ -201,5 +203,57 @@ public class PracticePageTests extends BaseTest {
         logger.info(
                 "Switch Window verification passed"
         );
+    }
+
+    @Test(
+            priority = 5,
+            groups = {"smoke", "regression"}
+    )
+    public void verifyOpenTab() {
+
+        logger.info("Starting Open Tab verification");
+
+        // 1. Capture parent window handle
+        String parentTab =
+                practicePage.getCurrentWindowHandle();
+
+        // 2. Click Open Tab
+        practicePage.clickOpenTab();
+
+        // 3. Get all window handles
+        Set<String> allTabs =
+                practicePage.getAllWindowHandles();
+
+        // 4. Validate new tab opened
+        Assert.assertEquals(
+                allTabs.size(),
+                2,
+                "Expected 2 tabs but found " + allTabs.size()
+        );
+
+        // 5. Switch to newly opened tab
+        practicePage.switchToNewWindow(parentTab);
+
+        // 6. Verify we switched to child tab
+        Assert.assertNotEquals(
+                practicePage.getCurrentWindowHandle(),
+                parentTab,
+                "Driver should be switched to the new tab"
+        );
+
+        // 7. Close child tab
+        practicePage.closeCurrentWindow();
+
+        // 8. Switch back to parent tab
+        practicePage.switchToWindow(parentTab);
+
+        // 9. Verify parent tab is active
+        Assert.assertEquals(
+                practicePage.getCurrentWindowHandle(),
+                parentTab,
+                "Driver should be switched back to the parent tab"
+        );
+
+        logger.info("Open Tab verification passed");
     }
 }

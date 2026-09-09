@@ -1,479 +1,153 @@
-2026-09-08 15:01:23 INFO  [main] Utils - [TestNG] Running:
+2026-09-09 13:24:05 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
+2026-09-09 13:24:05 INFO  [main] DriverFactory - Initializing browser: chrome
+2026-09-09 13:24:05 INFO  [main] DriverFactory - Headless mode: true
+2026-09-09 13:24:05 INFO  [main] DriverFactory - Chrome configured for headless execution
+2026-09-09 13:24:08 INFO  [main] DriverFactory - ChromeDriver initialized successfully
+2026-09-09 13:24:08 INFO  [main] DriverFactory - Browser window maximized successfully
+2026-09-09 13:24:08 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
+2026-09-09 13:24:33 INFO  [main] PracticePageTests - Test setup completed successfully
+2026-09-09 13:24:33 INFO  [main] PracticePageTests - Starting radio button verification for: BMW
+2026-09-09 13:24:33 INFO  [main] PracticePage - Selecting radio button: BMW
+2026-09-09 13:24:33 INFO  [main] PracticePage - Clicking element: By.id: bmwradio
+2026-09-09 13:24:33 INFO  [main] PracticePageTests - Radio button verification passed for: BMW
+2026-09-09 13:24:33 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
+2026-09-09 13:24:33 INFO  [main] DriverFactory - Closing browser
+2026-09-09 13:24:33 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
+2026-09-09 13:24:33 INFO  [main] PracticePageTests - Browser closed successfully
+2026-09-09 13:24:33 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
+2026-09-09 13:24:33 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
+2026-09-09 13:24:33 INFO  [main] DriverFactory - Initializing browser: chrome
+2026-09-09 13:24:33 INFO  [main] DriverFactory - Headless mode: true
+2026-09-09 13:24:33 INFO  [main] DriverFactory - Chrome configured for headless execution
+2026-09-09 13:24:34 INFO  [main] DriverFactory - ChromeDriver initialized successfully
+2026-09-09 13:24:34 INFO  [main] DriverFactory - Browser window maximized successfully
+2026-09-09 13:24:34 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
+2026-09-09 13:24:39 INFO  [main] PracticePageTests - Test setup completed successfully
+2026-09-09 13:24:39 INFO  [main] PracticePageTests - Starting radio button verification for: Benz
+2026-09-09 13:24:39 INFO  [main] PracticePage - Selecting radio button: Benz
+2026-09-09 13:24:39 INFO  [main] PracticePage - Clicking element: By.id: benzradio
+2026-09-09 13:24:39 INFO  [main] PracticePageTests - Radio button verification passed for: Benz
+2026-09-09 13:24:39 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
+2026-09-09 13:24:39 INFO  [main] DriverFactory - Closing browser
+2026-09-09 13:24:39 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
+2026-09-09 13:24:39 INFO  [main] PracticePageTests - Browser closed successfully
+2026-09-09 13:24:39 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
+2026-09-09 13:24:39 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
+2026-09-09 13:24:39 INFO  [main] DriverFactory - Initializing browser: chrome
+2026-09-09 13:24:39 INFO  [main] DriverFactory - Headless mode: true
+2026-09-09 13:24:39 INFO  [main] DriverFactory - Chrome configured for headless execution
+2026-09-09 13:24:40 INFO  [main] DriverFactory - ChromeDriver initialized successfully
+2026-09-09 13:24:40 INFO  [main] DriverFactory - Browser window maximized successfully
+2026-09-09 13:24:40 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
+2026-09-09 13:24:51 INFO  [main] PracticePageTests - Test setup completed successfully
+2026-09-09 13:24:51 INFO  [main] PracticePageTests - Starting radio button verification for: Honda
+2026-09-09 13:24:51 INFO  [main] PracticePage - Selecting radio button: Honda
+2026-09-09 13:24:51 INFO  [main] PracticePage - Clicking element: By.id: hondaradio
+2026-09-09 13:24:51 INFO  [main] PracticePageTests - Radio button verification passed for: Honda
+2026-09-09 13:24:51 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
+2026-09-09 13:24:51 INFO  [main] DriverFactory - Closing browser
+2026-09-09 13:24:51 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
+2026-09-09 13:24:51 INFO  [main] PracticePageTests - Browser closed successfully
+2026-09-09 13:24:51 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
+2026-09-09 13:24:51 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
+2026-09-09 13:24:51 INFO  [main] DriverFactory - Initializing browser: chrome
+2026-09-09 13:24:51 INFO  [main] DriverFactory - Headless mode: true
+2026-09-09 13:24:51 INFO  [main] DriverFactory - Chrome configured for headless execution
+2026-09-09 13:24:51 INFO  [main] DriverFactory - ChromeDriver initialized successfully
+2026-09-09 13:24:51 INFO  [main] DriverFactory - Browser window maximized successfully
+2026-09-09 13:24:51 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
+2026-09-09 13:24:57 INFO  [main] PracticePageTests - Test setup completed successfully
+2026-09-09 13:24:57 INFO  [main] PracticePageTests - Starting BMW checkbox verification
+2026-09-09 13:24:57 INFO  [main] PracticePage - Selecting BMW checkbox
+2026-09-09 13:24:57 INFO  [main] PracticePage - Selecting checkbox/radio button: By.id: bmwcheck
+2026-09-09 13:24:57 INFO  [main] PracticePageTests - BMW checkbox verification passed
+2026-09-09 13:24:57 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
+2026-09-09 13:24:57 INFO  [main] DriverFactory - Closing browser
+2026-09-09 13:24:57 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
+2026-09-09 13:24:57 INFO  [main] PracticePageTests - Browser closed successfully
+2026-09-09 13:24:57 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
+2026-09-09 13:24:57 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
+2026-09-09 13:24:57 INFO  [main] DriverFactory - Initializing browser: chrome
+2026-09-09 13:24:57 INFO  [main] DriverFactory - Headless mode: true
+2026-09-09 13:24:57 INFO  [main] DriverFactory - Chrome configured for headless execution
+2026-09-09 13:24:58 INFO  [main] DriverFactory - ChromeDriver initialized successfully
+2026-09-09 13:24:58 INFO  [main] DriverFactory - Browser window maximized successfully
+2026-09-09 13:24:58 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
+2026-09-09 13:25:15 INFO  [main] PracticePageTests - Test setup completed successfully
+2026-09-09 13:25:15 INFO  [main] PracticePageTests - Starting car dropdown verification
+2026-09-09 13:25:15 INFO  [main] PracticePage - Selecting car from dropdown by visible text: BMW
+2026-09-09 13:25:15 INFO  [main] PracticePage - Selecting 'BMW' from dropdown: By.id: carselect
+2026-09-09 13:25:15 INFO  [main] PracticePageTests - Car dropdown verification passed. Selected car: BMW
+2026-09-09 13:25:15 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
+2026-09-09 13:25:15 INFO  [main] DriverFactory - Closing browser
+2026-09-09 13:25:16 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
+2026-09-09 13:25:16 INFO  [main] PracticePageTests - Browser closed successfully
+2026-09-09 13:25:16 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
+2026-09-09 13:25:16 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
+2026-09-09 13:25:16 INFO  [main] DriverFactory - Initializing browser: chrome
+2026-09-09 13:25:16 INFO  [main] DriverFactory - Headless mode: true
+2026-09-09 13:25:16 INFO  [main] DriverFactory - Chrome configured for headless execution
+2026-09-09 13:25:16 INFO  [main] DriverFactory - ChromeDriver initialized successfully
+2026-09-09 13:25:16 INFO  [main] DriverFactory - Browser window maximized successfully
+2026-09-09 13:25:16 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
+2026-09-09 13:25:27 INFO  [main] PracticePageTests - Test setup completed successfully
+2026-09-09 13:25:27 INFO  [main] PracticePageTests - Starting Switch Window verification
+2026-09-09 13:25:27 INFO  [main] PracticePage - Clicking Open Window button
+2026-09-09 13:25:27 INFO  [main] PracticePage - Clicking element: By.id: openwindow
+2026-09-09 13:25:27 INFO  [main] PracticePage - Switching to window: 714F15CD63A10285AE235E830035B2EA
+2026-09-09 13:25:27 INFO  [main] PracticePageTests - Switched successfully to child window
+2026-09-09 13:25:27 INFO  [main] PracticePage - Closing current browser window
+2026-09-09 13:25:27 INFO  [main] PracticePageTests - Child window closed successfully
+2026-09-09 13:25:27 INFO  [main] PracticePage - Switching to window: 187C43C9A4842D2E17D28A70809CBA74
+2026-09-09 13:25:27 INFO  [main] PracticePageTests - Switched successfully back to parent window
+2026-09-09 13:25:27 INFO  [main] PracticePageTests - Switch Window verification passed
+2026-09-09 13:25:27 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
+2026-09-09 13:25:27 INFO  [main] DriverFactory - Closing browser
+2026-09-09 13:25:27 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
+2026-09-09 13:25:27 INFO  [main] PracticePageTests - Browser closed successfully
+2026-09-09 13:25:27 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
+2026-09-09 14:44:20 INFO  [main] Utils - [TestNG] Running:
   C:\Users\musta\AppData\Local\JetBrains\IdeaIC2023.1\temp-testng-customsuite.xml
 
-2026-09-08 15:02:12 INFO  [main] PracticePageTests - Starting dropdown selection test
-2026-09-08 15:02:12 INFO  [main] PracticePageTests - BMW selected successfully
-2026-09-08 15:02:12 INFO  [main] PracticePageTests - Dropdown test completed successfully
-2026-09-08 15:02:44 INFO  [main] Utils - [TestNG] Running:
+2026-09-09 14:44:20 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
+2026-09-09 14:44:20 INFO  [main] DriverFactory - Initializing browser: chrome
+2026-09-09 14:44:20 INFO  [main] DriverFactory - Headless mode: false
+2026-09-09 14:44:22 INFO  [main] DriverFactory - ChromeDriver initialized successfully
+2026-09-09 14:44:22 INFO  [main] DriverFactory - Browser window maximized successfully
+2026-09-09 14:44:22 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
+2026-09-09 14:45:03 INFO  [main] PracticePageTests - Test setup completed successfully
+2026-09-09 14:45:03 INFO  [main] PracticePageTests - Starting Open Tab verification
+2026-09-09 14:45:03 INFO  [main] PracticePage - Clicking Open Tab button
+2026-09-09 14:45:03 INFO  [main] PracticePage - Clicking element: By.cssSelector: #opentab
+2026-09-09 14:45:03 INFO  [main] PracticePage - Switching to window: 80E9DE73CAFF21CEEEE8BD7650D42180
+2026-09-09 14:45:03 INFO  [main] PracticePage - Closing current browser window
+2026-09-09 14:45:03 INFO  [main] PracticePage - Switching to window: 84AB4BF911177BB9183E98AED5AA2F0E
+2026-09-09 14:45:03 INFO  [main] PracticePageTests - Open Tab verification passed
+2026-09-09 14:45:03 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
+2026-09-09 14:45:03 INFO  [main] DriverFactory - Closing browser
+2026-09-09 14:45:03 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
+2026-09-09 14:45:03 INFO  [main] PracticePageTests - Browser closed successfully
+2026-09-09 14:45:03 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
+2026-09-09 15:02:36 INFO  [main] Utils - [TestNG] Running:
   C:\Users\musta\AppData\Local\JetBrains\IdeaIC2023.1\temp-testng-customsuite.xml
 
-2026-09-08 15:02:52 INFO  [main] PracticePageTests - Starting dropdown selection test
-2026-09-08 15:02:52 INFO  [main] PracticePageTests - Honda selected successfully
-2026-09-08 15:12:06 INFO  [main] Utils - [TestNG] Running:
-  C:\Users\musta\AppData\Local\JetBrains\IdeaIC2023.1\temp-testng-customsuite.xml
-
-2026-09-08 15:12:31 INFO  [main] PracticePageTests - Starting dropdown selection test
-2026-09-08 15:12:31 INFO  [main] PracticePageTests - Honda selected successfully
-2026-09-08 15:12:31 INFO  [main] PracticePageTests - Dropdown test completed successfully
-2026-09-08 15:14:32 INFO  [main] PracticePageTests - Starting dropdown selection test
-2026-09-08 15:14:32 INFO  [main] PracticePageTests - Honda selected successfully
-2026-09-08 15:14:32 INFO  [main] PracticePageTests - Dropdown test completed successfully
-2026-09-08 15:24:33 INFO  [main] Utils - [TestNG] Running:
-  C:\Users\musta\AppData\Local\JetBrains\IdeaIC2023.1\temp-testng-customsuite.xml
-
-2026-09-08 15:24:33 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 15:24:33 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 15:24:33 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 15:24:34 INFO  [main] DriverFactory - Browser initialized successfully: chrome
-2026-09-08 15:24:34 INFO  [main] PracticePageTests - Navigating to: https://www.letskodeit.com/practice
-2026-09-08 15:24:59 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 15:24:59 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 15:24:59 INFO  [main] DriverFactory - Closing browser
-2026-09-08 15:24:59 INFO  [main] DriverFactory - Browser closed successfully
-2026-09-08 15:24:59 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 15:24:59 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 15:24:59 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 15:24:59 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 15:24:59 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 15:25:00 INFO  [main] DriverFactory - Browser initialized successfully: chrome
-2026-09-08 15:25:00 INFO  [main] PracticePageTests - Navigating to: https://www.letskodeit.com/practice
-2026-09-08 15:25:06 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 15:25:06 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 15:25:06 INFO  [main] DriverFactory - Closing browser
-2026-09-08 15:25:06 INFO  [main] DriverFactory - Browser closed successfully
-2026-09-08 15:25:06 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 15:25:06 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 15:25:06 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 15:25:06 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 15:25:06 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 15:25:07 INFO  [main] DriverFactory - Browser initialized successfully: chrome
-2026-09-08 15:25:07 INFO  [main] PracticePageTests - Navigating to: https://www.letskodeit.com/practice
-2026-09-08 15:25:14 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 15:25:14 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 15:25:14 INFO  [main] DriverFactory - Closing browser
-2026-09-08 15:25:14 INFO  [main] DriverFactory - Browser closed successfully
-2026-09-08 15:25:14 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 15:25:14 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 15:33:30 INFO  [main] Utils - [TestNG] Running:
-  C:\Users\musta\AppData\Local\JetBrains\IdeaIC2023.1\temp-testng-customsuite.xml
-
-2026-09-08 15:33:30 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 15:33:31 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 15:33:31 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 15:33:32 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 15:33:32 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 15:33:32 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 15:33:45 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 15:33:45 INFO  [main] PracticePageTests - Starting radio button verification for: BMW
-2026-09-08 15:33:45 INFO  [main] PracticePage - Selecting radio button: BMW
-2026-09-08 15:33:45 INFO  [main] PracticePage - Clicking element: By.id: bmwradio
-2026-09-08 15:33:45 INFO  [main] PracticePageTests - Radio button verification passed for: BMW
-2026-09-08 15:33:45 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 15:33:45 INFO  [main] DriverFactory - Closing browser
-2026-09-08 15:33:45 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 15:33:45 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 15:33:45 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 15:33:45 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 15:33:45 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 15:33:45 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 15:33:46 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 15:33:46 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 15:33:46 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 15:33:52 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 15:33:52 INFO  [main] PracticePageTests - Starting radio button verification for: Benz
-2026-09-08 15:33:52 INFO  [main] PracticePage - Selecting radio button: Benz
-2026-09-08 15:33:52 INFO  [main] PracticePage - Clicking element: By.id: benzradio
-2026-09-08 15:33:52 INFO  [main] PracticePageTests - Radio button verification passed for: Benz
-2026-09-08 15:33:52 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 15:33:52 INFO  [main] DriverFactory - Closing browser
-2026-09-08 15:33:52 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 15:33:52 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 15:33:52 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 15:33:52 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 15:33:52 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 15:33:52 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 15:33:53 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 15:33:53 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 15:33:53 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 15:34:00 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 15:34:00 INFO  [main] PracticePageTests - Starting radio button verification for: Honda
-2026-09-08 15:34:00 INFO  [main] PracticePage - Selecting radio button: Honda
-2026-09-08 15:34:00 INFO  [main] PracticePage - Clicking element: By.id: hondaradio
-2026-09-08 15:34:00 INFO  [main] PracticePageTests - Radio button verification passed for: Honda
-2026-09-08 15:34:00 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 15:34:00 INFO  [main] DriverFactory - Closing browser
-2026-09-08 15:34:00 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 15:34:00 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 15:34:00 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 15:34:00 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 15:34:00 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 15:34:00 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 15:34:01 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 15:34:01 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 15:34:01 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 15:34:06 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 15:34:06 INFO  [main] PracticePageTests - Starting BMW checkbox verification
-2026-09-08 15:34:06 INFO  [main] PracticePage - Selecting BMW checkbox
-2026-09-08 15:34:06 INFO  [main] PracticePage - Selecting checkbox/radio button: By.id: bmwcheck
-2026-09-08 15:34:06 INFO  [main] PracticePageTests - BMW checkbox verification passed
-2026-09-08 15:34:06 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 15:34:06 INFO  [main] DriverFactory - Closing browser
-2026-09-08 15:34:06 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 15:34:06 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 15:34:06 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 15:34:06 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 15:34:06 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 15:34:06 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 15:34:07 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 15:34:07 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 15:34:07 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 15:34:13 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 15:34:13 INFO  [main] PracticePageTests - Starting car dropdown verification
-2026-09-08 15:34:13 INFO  [main] PracticePage - Selecting car from dropdown by visible text: BMW
-2026-09-08 15:34:13 INFO  [main] PracticePage - Selecting 'BMW' from dropdown: By.id: carselect
-2026-09-08 15:34:13 INFO  [main] PracticePageTests - Car dropdown verification passed. Selected car: BMW
-2026-09-08 15:34:13 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 15:34:13 INFO  [main] DriverFactory - Closing browser
-2026-09-08 15:34:13 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 15:34:13 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 15:34:13 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 15:34:13 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 15:34:13 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 15:34:13 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 15:34:14 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 15:34:14 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 15:34:14 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 15:34:22 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 15:34:22 INFO  [main] PracticePageTests - Starting Switch Window verification
-2026-09-08 15:34:22 INFO  [main] PracticePage - Clicking Open Window button
-2026-09-08 15:34:22 INFO  [main] PracticePage - Clicking element: By.id: openwindow
-2026-09-08 15:34:22 INFO  [main] PracticePage - Switching to window: FADEB22EB8B1F0036FE3706BF2A49EDC
-2026-09-08 15:34:22 INFO  [main] PracticePageTests - Switched successfully to child window
-2026-09-08 15:34:22 INFO  [main] PracticePage - Closing current browser window
-2026-09-08 15:34:22 INFO  [main] PracticePageTests - Child window closed successfully
-2026-09-08 15:34:22 INFO  [main] PracticePage - Switching to window: 5535537A48A076400E601F748BDD0AB1
-2026-09-08 15:34:22 INFO  [main] PracticePageTests - Switched successfully back to parent window
-2026-09-08 15:34:22 INFO  [main] PracticePageTests - Switch Window verification passed
-2026-09-08 15:34:22 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 15:34:22 INFO  [main] DriverFactory - Closing browser
-2026-09-08 15:34:22 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 15:34:22 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 15:34:22 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:18:26 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:18:26 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:18:26 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:18:39 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:18:39 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:18:39 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:25:35 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:25:35 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:25:35 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:25:38 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:25:38 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:25:38 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:26:04 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:26:04 INFO  [main] PracticePageTests - Starting radio button verification for: BMW
-2026-09-08 17:26:04 INFO  [main] PracticePage - Selecting radio button: BMW
-2026-09-08 17:26:04 INFO  [main] PracticePage - Clicking element: By.id: bmwradio
-2026-09-08 17:26:04 INFO  [main] PracticePageTests - Radio button verification passed for: BMW
-2026-09-08 17:26:04 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:26:04 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:26:05 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:26:05 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:26:05 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:26:05 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:26:05 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:26:05 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:26:05 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:26:05 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:26:05 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:26:13 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:26:13 INFO  [main] PracticePageTests - Starting radio button verification for: Benz
-2026-09-08 17:26:13 INFO  [main] PracticePage - Selecting radio button: Benz
-2026-09-08 17:26:13 INFO  [main] PracticePage - Clicking element: By.id: benzradio
-2026-09-08 17:26:13 INFO  [main] PracticePageTests - Radio button verification passed for: Benz
-2026-09-08 17:26:13 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:26:13 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:26:13 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:26:13 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:26:13 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:26:13 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:26:13 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:26:13 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:26:14 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:26:14 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:26:14 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:26:19 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:26:19 INFO  [main] PracticePageTests - Starting radio button verification for: Honda
-2026-09-08 17:26:19 INFO  [main] PracticePage - Selecting radio button: Honda
-2026-09-08 17:26:19 INFO  [main] PracticePage - Clicking element: By.id: hondaradio
-2026-09-08 17:26:19 INFO  [main] PracticePageTests - Radio button verification passed for: Honda
-2026-09-08 17:26:19 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:26:19 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:26:19 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:26:19 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:26:19 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:26:19 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:26:19 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:26:19 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:26:20 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:26:20 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:26:20 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:26:25 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:26:25 INFO  [main] PracticePageTests - Starting BMW checkbox verification
-2026-09-08 17:26:25 INFO  [main] PracticePage - Selecting BMW checkbox
-2026-09-08 17:26:25 INFO  [main] PracticePage - Selecting checkbox/radio button: By.id: bmwcheck
-2026-09-08 17:26:26 INFO  [main] PracticePageTests - BMW checkbox verification passed
-2026-09-08 17:26:26 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:26:26 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:26:26 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:26:26 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:26:26 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:26:26 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:26:26 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:26:26 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:26:26 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:26:26 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:26:26 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:26:32 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:26:32 INFO  [main] PracticePageTests - Starting car dropdown verification
-2026-09-08 17:26:32 INFO  [main] PracticePage - Selecting car from dropdown by visible text: BMW
-2026-09-08 17:26:32 INFO  [main] PracticePage - Selecting 'BMW' from dropdown: By.id: carselect
-2026-09-08 17:26:32 INFO  [main] PracticePageTests - Car dropdown verification passed. Selected car: BMW
-2026-09-08 17:26:32 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:26:32 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:26:32 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:26:32 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:26:32 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:26:32 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:26:32 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:26:32 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:26:33 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:26:33 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:26:33 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:26:38 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:26:38 INFO  [main] PracticePageTests - Starting Switch Window verification
-2026-09-08 17:26:38 INFO  [main] PracticePage - Clicking Open Window button
-2026-09-08 17:26:38 INFO  [main] PracticePage - Clicking element: By.id: openwindow
-2026-09-08 17:26:38 INFO  [main] PracticePage - Switching to window: A5233DB2B197522845E57E40F9DE8ECD
-2026-09-08 17:26:38 INFO  [main] PracticePageTests - Switched successfully to child window
-2026-09-08 17:26:38 INFO  [main] PracticePage - Closing current browser window
-2026-09-08 17:26:38 INFO  [main] PracticePageTests - Child window closed successfully
-2026-09-08 17:26:38 INFO  [main] PracticePage - Switching to window: 6315ACC691A0EF882105A0EFD69759CF
-2026-09-08 17:26:38 INFO  [main] PracticePageTests - Switched successfully back to parent window
-2026-09-08 17:26:38 INFO  [main] PracticePageTests - Switch Window verification passed
-2026-09-08 17:26:38 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:26:38 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:26:38 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:26:38 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:26:38 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:30:15 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:30:15 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:30:15 INFO  [main] DriverFactory - Headless mode: true
-2026-09-08 17:30:15 INFO  [main] DriverFactory - Chrome configured for headless execution
-2026-09-08 17:30:16 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:30:16 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:30:16 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:30:45 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:30:45 INFO  [main] PracticePageTests - Starting radio button verification for: BMW
-2026-09-08 17:30:45 INFO  [main] PracticePage - Selecting radio button: BMW
-2026-09-08 17:30:45 INFO  [main] PracticePage - Clicking element: By.id: bmwradio
-2026-09-08 17:30:45 INFO  [main] PracticePageTests - Radio button verification passed for: BMW
-2026-09-08 17:30:45 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:30:45 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:30:46 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:30:46 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:30:46 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:30:46 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:30:46 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:30:46 INFO  [main] DriverFactory - Headless mode: true
-2026-09-08 17:30:46 INFO  [main] DriverFactory - Chrome configured for headless execution
-2026-09-08 17:30:46 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:30:46 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:30:46 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:30:51 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:30:51 INFO  [main] PracticePageTests - Starting radio button verification for: Benz
-2026-09-08 17:30:51 INFO  [main] PracticePage - Selecting radio button: Benz
-2026-09-08 17:30:51 INFO  [main] PracticePage - Clicking element: By.id: benzradio
-2026-09-08 17:30:52 INFO  [main] PracticePageTests - Radio button verification passed for: Benz
-2026-09-08 17:30:52 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:30:52 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:30:52 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:30:52 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:30:52 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:30:52 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:30:52 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:30:52 INFO  [main] DriverFactory - Headless mode: true
-2026-09-08 17:30:52 INFO  [main] DriverFactory - Chrome configured for headless execution
-2026-09-08 17:30:52 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:30:52 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:30:52 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:30:58 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:30:58 INFO  [main] PracticePageTests - Starting radio button verification for: Honda
-2026-09-08 17:30:58 INFO  [main] PracticePage - Selecting radio button: Honda
-2026-09-08 17:30:58 INFO  [main] PracticePage - Clicking element: By.id: hondaradio
-2026-09-08 17:30:58 INFO  [main] PracticePageTests - Radio button verification passed for: Honda
-2026-09-08 17:30:58 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:30:58 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:30:58 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:30:58 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:30:58 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:30:58 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:30:58 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:30:58 INFO  [main] DriverFactory - Headless mode: true
-2026-09-08 17:30:58 INFO  [main] DriverFactory - Chrome configured for headless execution
-2026-09-08 17:30:59 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:30:59 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:30:59 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:31:05 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:31:05 INFO  [main] PracticePageTests - Starting BMW checkbox verification
-2026-09-08 17:31:05 INFO  [main] PracticePage - Selecting BMW checkbox
-2026-09-08 17:31:05 INFO  [main] PracticePage - Selecting checkbox/radio button: By.id: bmwcheck
-2026-09-08 17:31:05 INFO  [main] PracticePageTests - BMW checkbox verification passed
-2026-09-08 17:31:05 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:31:05 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:31:05 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:31:05 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:31:05 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:31:05 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:31:05 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:31:05 INFO  [main] DriverFactory - Headless mode: true
-2026-09-08 17:31:05 INFO  [main] DriverFactory - Chrome configured for headless execution
-2026-09-08 17:31:06 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:31:06 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:31:06 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:31:21 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:31:21 INFO  [main] PracticePageTests - Starting car dropdown verification
-2026-09-08 17:31:21 INFO  [main] PracticePage - Selecting car from dropdown by visible text: BMW
-2026-09-08 17:31:21 INFO  [main] PracticePage - Selecting 'BMW' from dropdown: By.id: carselect
-2026-09-08 17:31:21 INFO  [main] PracticePageTests - Car dropdown verification passed. Selected car: BMW
-2026-09-08 17:31:21 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:31:21 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:31:21 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:31:21 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:31:21 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:31:21 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:31:21 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:31:21 INFO  [main] DriverFactory - Headless mode: true
-2026-09-08 17:31:21 INFO  [main] DriverFactory - Chrome configured for headless execution
-2026-09-08 17:31:22 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:31:22 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:31:22 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:31:28 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:31:28 INFO  [main] PracticePageTests - Starting Switch Window verification
-2026-09-08 17:31:28 INFO  [main] PracticePage - Clicking Open Window button
-2026-09-08 17:31:28 INFO  [main] PracticePage - Clicking element: By.id: openwindow
-2026-09-08 17:31:28 INFO  [main] PracticePage - Switching to window: 791ABEBEE8C36D23FA2FBEF22585C8D2
-2026-09-08 17:31:28 INFO  [main] PracticePageTests - Switched successfully to child window
-2026-09-08 17:31:28 INFO  [main] PracticePage - Closing current browser window
-2026-09-08 17:31:28 INFO  [main] PracticePageTests - Child window closed successfully
-2026-09-08 17:31:28 INFO  [main] PracticePage - Switching to window: C756BAE2E7199A6D6496C8D856A458AD
-2026-09-08 17:31:28 INFO  [main] PracticePageTests - Switched successfully back to parent window
-2026-09-08 17:31:28 INFO  [main] PracticePageTests - Switch Window verification passed
-2026-09-08 17:31:28 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:31:28 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:31:28 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:31:28 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:31:28 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:42:30 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:42:30 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:42:30 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:42:31 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:42:31 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:42:31 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:42:46 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:42:46 INFO  [main] PracticePageTests - Starting radio button verification for: BMW
-2026-09-08 17:42:47 INFO  [main] PracticePage - Selecting radio button: BMW
-2026-09-08 17:42:47 INFO  [main] PracticePage - Clicking element: By.id: bmwradio
-2026-09-08 17:42:47 INFO  [main] PracticePageTests - Radio button verification passed for: BMW
-2026-09-08 17:42:47 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:42:47 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:42:47 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:42:47 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:42:47 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:42:47 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:42:47 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:42:47 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:42:47 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:42:47 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:42:47 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:42:54 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:42:54 INFO  [main] PracticePageTests - Starting radio button verification for: Benz
-2026-09-08 17:42:54 INFO  [main] PracticePage - Selecting radio button: Benz
-2026-09-08 17:42:54 INFO  [main] PracticePage - Clicking element: By.id: benzradio
-2026-09-08 17:42:54 INFO  [main] PracticePageTests - Radio button verification passed for: Benz
-2026-09-08 17:42:54 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:42:54 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:42:55 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:42:55 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:42:55 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:42:55 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:42:55 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:42:55 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:42:55 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:42:55 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:42:55 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:43:01 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:43:01 INFO  [main] PracticePageTests - Starting radio button verification for: Honda
-2026-09-08 17:43:01 INFO  [main] PracticePage - Selecting radio button: Honda
-2026-09-08 17:43:01 INFO  [main] PracticePage - Clicking element: By.id: hondaradio
-2026-09-08 17:43:01 INFO  [main] PracticePageTests - Radio button verification passed for: Honda
-2026-09-08 17:43:01 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:43:01 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:43:01 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:43:01 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:43:01 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:43:01 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:43:01 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:43:01 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:43:02 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:43:02 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:43:02 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:43:07 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:43:07 INFO  [main] PracticePageTests - Starting BMW checkbox verification
-2026-09-08 17:43:07 INFO  [main] PracticePage - Selecting BMW checkbox
-2026-09-08 17:43:07 INFO  [main] PracticePage - Selecting checkbox/radio button: By.id: bmwcheck
-2026-09-08 17:43:07 INFO  [main] PracticePageTests - BMW checkbox verification passed
-2026-09-08 17:43:07 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:43:07 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:43:07 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:43:07 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:43:07 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:43:07 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:43:07 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:43:07 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:43:07 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:43:07 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:43:07 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:43:13 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:43:13 INFO  [main] PracticePageTests - Starting car dropdown verification
-2026-09-08 17:43:13 INFO  [main] PracticePage - Selecting car from dropdown by visible text: BMW
-2026-09-08 17:43:13 INFO  [main] PracticePage - Selecting 'BMW' from dropdown: By.id: carselect
-2026-09-08 17:43:13 INFO  [main] PracticePageTests - Car dropdown verification passed. Selected car: BMW
-2026-09-08 17:43:13 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:43:13 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:43:14 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:43:14 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:43:14 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
-2026-09-08 17:43:14 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
-2026-09-08 17:43:14 INFO  [main] DriverFactory - Initializing browser: chrome
-2026-09-08 17:43:14 INFO  [main] DriverFactory - Headless mode: false
-2026-09-08 17:43:14 INFO  [main] DriverFactory - ChromeDriver initialized successfully
-2026-09-08 17:43:14 INFO  [main] DriverFactory - Browser window maximized successfully
-2026-09-08 17:43:14 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
-2026-09-08 17:43:40 INFO  [main] PracticePageTests - Test setup completed successfully
-2026-09-08 17:43:40 INFO  [main] PracticePageTests - Starting Switch Window verification
-2026-09-08 17:43:40 INFO  [main] PracticePage - Clicking Open Window button
-2026-09-08 17:43:40 INFO  [main] PracticePage - Clicking element: By.id: openwindow
-2026-09-08 17:43:40 INFO  [main] PracticePage - Switching to window: AA32BE7D327CD2944CD6B5D447F3321B
-2026-09-08 17:43:40 INFO  [main] PracticePageTests - Switched successfully to child window
-2026-09-08 17:43:40 INFO  [main] PracticePage - Closing current browser window
-2026-09-08 17:43:40 INFO  [main] PracticePageTests - Child window closed successfully
-2026-09-08 17:43:40 INFO  [main] PracticePage - Switching to window: 53FD6C8FFBE95519B421865E3DF0BA35
-2026-09-08 17:43:40 INFO  [main] PracticePageTests - Switched successfully back to parent window
-2026-09-08 17:43:40 INFO  [main] PracticePageTests - Switch Window verification passed
-2026-09-08 17:43:40 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
-2026-09-08 17:43:40 INFO  [main] DriverFactory - Closing browser
-2026-09-08 17:43:40 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
-2026-09-08 17:43:40 INFO  [main] PracticePageTests - Browser closed successfully
-2026-09-08 17:43:40 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========
+2026-09-09 15:02:36 INFO  [main] PracticePageTests - ========== Test Setup Started ==========
+2026-09-09 15:02:36 INFO  [main] DriverFactory - Initializing browser: chrome
+2026-09-09 15:02:36 INFO  [main] DriverFactory - Headless mode: false
+2026-09-09 15:02:37 INFO  [main] DriverFactory - ChromeDriver initialized successfully
+2026-09-09 15:02:37 INFO  [main] DriverFactory - Browser window maximized successfully
+2026-09-09 15:02:37 INFO  [main] PracticePageTests - Navigating to URL: https://www.letskodeit.com/practice
+2026-09-09 15:03:12 INFO  [main] PracticePageTests - Test setup completed successfully
+2026-09-09 15:03:12 INFO  [main] PracticePageTests - Starting Open Tab verification
+2026-09-09 15:03:12 INFO  [main] PracticePage - Clicking Open Tab button
+2026-09-09 15:03:12 INFO  [main] PracticePage - Clicking element: By.cssSelector: #opentab
+2026-09-09 15:03:12 INFO  [main] PracticePage - Looking for newly opened window/tab
+2026-09-09 15:03:12 INFO  [main] PracticePage - Switching to newly opened window/tab: D8111518C44ACE186412EB12DCB275B5
+2026-09-09 15:03:12 INFO  [main] PracticePage - Closing current window/tab
+2026-09-09 15:03:13 INFO  [main] PracticePage - Switching to window/tab: CA3F195675D3B6A071A0411F6597C896
+2026-09-09 15:03:13 INFO  [main] PracticePageTests - Open Tab verification passed
+2026-09-09 15:03:13 INFO  [main] PracticePageTests - ========== Test Teardown Started ==========
+2026-09-09 15:03:13 INFO  [main] DriverFactory - Closing browser
+2026-09-09 15:03:13 INFO  [main] DriverFactory - Browser closed and WebDriver reference cleared
+2026-09-09 15:03:13 INFO  [main] PracticePageTests - Browser closed successfully
+2026-09-09 15:03:13 INFO  [main] PracticePageTests - ========== Test Teardown Completed ==========

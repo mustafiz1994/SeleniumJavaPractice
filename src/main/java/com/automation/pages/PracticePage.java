@@ -4,6 +4,8 @@ import com.automation.base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.Set;
+
 public class PracticePage extends BasePage {
 
     // =========================
@@ -233,11 +235,48 @@ public class PracticePage extends BasePage {
     // =========================
     // Window Actions
     // =========================
+    private final By openTabButton =
+            By.cssSelector("#opentab");
 
     public void clickOpenWindow() {
 
         logger.info("Clicking Open Window button");
 
         click(openWindowButton);
+    }
+
+    public void clickOpenTab() {
+
+        logger.info("Clicking Open Tab button");
+
+        click(openTabButton);
+    }
+    // =========================
+// Window / Tab Actions
+// =========================
+
+    public String getCurrentWindowHandle() {
+
+        return super.getCurrentWindowHandle();
+    }
+
+    public Set<String> getAllWindowHandles() {
+
+        return super.getAllWindowHandles();
+    }
+
+    public void switchToWindow(String windowHandle) {
+
+        super.switchToWindow(windowHandle);
+    }
+
+    public void switchToNewWindow(String parentWindow) {
+
+        super.switchToNewWindow(parentWindow);
+    }
+
+    public void closeCurrentWindow() {
+
+        super.closeCurrentWindow();
     }
 }
